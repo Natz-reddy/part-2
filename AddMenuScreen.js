@@ -23,6 +23,14 @@ const [dishName, setDishName] = useState('');
     }
   };
 
+return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Add Menu Item</Text> 
+      </View>
+  );
+
+
+
 
 
 
