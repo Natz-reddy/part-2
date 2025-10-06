@@ -23,9 +23,9 @@ const [dishName, setDishName] = useState('');
     }
   };
 
-return (
+  return (
     <View style={styles.container}>
-      <Text style={styles.title}>Add Menu Item</Text> 
+      <Text style={styles.title}>Add Menu Item</Text>
 
       <TextInput
         style={styles.input}
@@ -50,15 +50,33 @@ return (
         onChangeText={setDishPrice}
       />
 
+      <Picker
+        selectedValue={course}
+        onValueChange={(itemValue) => setCourse(itemValue)}
+        style={styles.picker}
+        itemStyle={{ color: '#000', fontSize: 16 }}
+      >
+        <Picker.Item label="Starter" value="Starter" />
+        <Picker.Item label="Main" value="Main" />
+        <Picker.Item label="Dessert" value="Dessert" />
+      </Picker>
 
-      </View>
+      <TouchableOpacity style={styles.button} onPress={addDish}>
+        <Text style={styles.buttonText}>Add Dish</Text>
+      </TouchableOpacity>
+
+      <FlatList
+        data={menuItems}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.card}>
+            <Text style={styles.name}>{item.name}</Text>
+            <Text>{item.description}</Text>
+            <Text>Course: {item.course}</Text>
+            <Text>Price: R{item.price}</Text>
+          </View>
+        )}
+      />
+    </View>
   );
-
-
-
-
-
-
-
-
 }
