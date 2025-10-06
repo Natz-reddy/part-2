@@ -6,3 +6,5 @@ import HomeScreen from './HomeScreen';
 import AddMenuScreen from './AddMenuScreen';
 
 const Stack = createNativeStackNavigator();
+export default function App() {
+  const [menuItems, setMenuItems] = useState([]); }
