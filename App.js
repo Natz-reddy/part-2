@@ -6,9 +6,10 @@ import HomeScreen from './HomeScreen';
 import AddMenuScreen from './AddMenuScreen';
 
 const Stack = createNativeStackNavigator();
+
 export default function App() {
-  const [menuItems, setMenuItems] = useState([]);
-   
+  const [menuItems, setMenuItems] = useState([]); 
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
