@@ -26,6 +26,31 @@ const [dishName, setDishName] = useState('');
 return (
     <View style={styles.container}>
       <Text style={styles.title}>Add Menu Item</Text> 
+
+      <TextInput
+        style={styles.input}
+        placeholder="Dish Name"
+        placeholderTextColor="#555"
+        value={dishName}
+        onChangeText={setDishName}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Description"
+        placeholderTextColor="#555"
+        value={dishDescription}
+        onChangeText={setDishDescription}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Price"
+        placeholderTextColor="#555"
+        keyboardType="numeric"
+        value={dishPrice}
+        onChangeText={setDishPrice}
+      />
+
+
       </View>
   );
 
