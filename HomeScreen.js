@@ -35,3 +35,13 @@ export default function HomeScreen({ navigation, menuItems }) {
     </View>
   );
 }
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 20, backgroundColor: '#d8cfc4' },
+  title: { fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 10 },
+  subtitle: { fontSize: 16, textAlign: 'center', marginBottom: 20 },
+  empty: { textAlign: 'center', fontStyle: 'italic', marginTop: 40 },
+  card: { backgroundColor: '#fff', borderRadius: 10, padding: 15, marginBottom: 10 },
+  name: { fontSize: 18, fontWeight: 'bold', marginBottom: 4 },
+  button: { backgroundColor: '#D2B48C', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 20 },
+  buttonText: { color: '#fff', fontWeight: 'bold', fontSize: 16 },
+});
