@@ -94,6 +94,22 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
           </View>
         )}
       />
+
+<View style={styles.navContainer}>
+  <TouchableOpacity
+    style={[styles.navButton, { backgroundColor: 'brown' }]}
+    onPress={() => navigation.navigate('Home')}
+  >
+    <Text style={[styles.navButtonText, { color: '#fff' }]}>Go Back Home</Text>
+  </TouchableOpacity>
+
+  <TouchableOpacity
+    style={[styles.navButton, { backgroundColor: '#D2B48C' }]}
+    onPress={() => navigation.navigate('FilterMenu', { menuItems })}
+  >
+    <Text style={[styles.navButtonText, { color: '#fff' }]}>Go to Filter Menu</Text>
+  </TouchableOpacity>
+</View>
     </View>
   );
 }
