@@ -30,8 +30,9 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Add Menu Item</Text>
+      <Text style={styles.title}>Add / Manage Menu</Text>
 
+      {/* Input Fields */}
       <TextInput
         style={styles.input}
         placeholder="Dish Name"
@@ -55,6 +56,7 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
         onChangeText={setDishPrice}
       />
 
+      {/* Course Picker */}
       <Picker
         selectedValue={course}
         onValueChange={(itemValue) => setCourse(itemValue)}
@@ -66,19 +68,23 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
         <Picker.Item label="Dessert" value="Dessert" />
       </Picker>
 
+      {/* Add Dish Button */}
       <TouchableOpacity style={styles.button} onPress={addDish}>
         <Text style={styles.buttonText}>Add Dish</Text>
       </TouchableOpacity>
 
+      {/* Menu List */}
       <FlatList
         data={menuItems}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <View style={styles.card}>
-            <Text style={styles.name}>{item.name}</Text>
-            <Text>{item.description}</Text>
-            <Text>Course: {item.course}</Text>
-            <Text>Price: R{item.price}</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.name}>{item.name}</Text>
+              <Text>{item.description}</Text>
+              <Text>Course: {item.course}</Text>
+              <Text>Price: R{item.price}</Text>
+            </View>
           </View>
         )}
       />
