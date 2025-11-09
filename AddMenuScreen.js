@@ -24,6 +24,10 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
     }
   };
 
+  const removeDish = (id) => {
+    setMenuItems(menuItems.filter((dish) => dish.id !== id));
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Add Menu Item</Text>
