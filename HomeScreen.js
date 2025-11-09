@@ -10,6 +10,11 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
 
   const totalItems = menuItems.length;
 
+  const averagePrice =
+    menuItems.length > 0
+      ? (menuItems.reduce((sum, item) => sum + item.price, 0) / menuItems.length).toFixed(2)
+      : 0;
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Christoffel's Menu </Text>
@@ -50,4 +55,4 @@ const styles = StyleSheet.create({
   name: { fontSize: 18, fontWeight: 'bold', marginBottom: 4 },
   button: { backgroundColor: '#D2B48C', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 20 },
   buttonText: { color: '#fff', fontWeight: 'bold', fontSize: 16 },
-});
+});});
