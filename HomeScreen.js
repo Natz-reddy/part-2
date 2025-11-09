@@ -17,11 +17,12 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Christoffel's Menu </Text>
+      <Text style={styles.title}>Christoffel's Menu</Text>
       <Text style={styles.subtitle}>Total Dishes: {totalItems}</Text>
+      <Text style={styles.subtitle}>Average Price: R{averagePrice}</Text>
 
       {menuItems.length === 0 ? (
-        <Text style={styles.empty}> Menu Items</Text>
+        <Text style={styles.empty}>No dishes available</Text>
       ) : (
         <FlatList
           data={menuItems}
