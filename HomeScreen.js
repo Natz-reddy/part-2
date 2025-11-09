@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 
-export default function HomeScreen({ navigation, menuItems }) {
+export default function HomeScreen({ navigation, route, menuItems, setMenuItems }) {
+  useEffect(() => {
+    if (route.params?.newItem) {
+      setMenuItems((prevItems) => [...prevItems, route.params.newItem]);
+    }
+  }, [route.params?.newItem]);
+
   const totalItems = menuItems.length;
 
   return (
