@@ -7,8 +7,14 @@ import AddMenuScreen from './AddMenuScreen';
 
 const Stack = createNativeStackNavigator();
 
+const predefinedMenu = [
+  { name: 'Tomato Soup', description: 'Classic starter', course: 'Starters', price: 45 },
+  { name: 'Grilled Chicken', description: 'Served with veggies', course: 'Mains', price: 120 },
+  { name: 'Chocolate Mousse', description: 'Rich and creamy', course: 'Dessert', price: 60 },
+];
+
 export default function App() {
-  const [menuItems, setMenuItems] = useState([]); 
+  const [menuItems, setMenuItems] = useState(predefinedMenu);
 
   return (
     <NavigationContainer>
@@ -18,6 +24,7 @@ export default function App() {
             <HomeScreen
               {...props}
               menuItems={menuItems}
+              setMenuItems={setMenuItems}
             />
           )}
         </Stack.Screen>
@@ -35,4 +42,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
