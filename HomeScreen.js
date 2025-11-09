@@ -40,7 +40,7 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('AddMenu')}
+        onPress={() => navigation.navigate('AddMenu', { menuItems, setMenuItems })}
       >
         <Text style={styles.buttonText}>Add Menu Item</Text>
       </TouchableOpacity>
