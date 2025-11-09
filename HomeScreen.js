@@ -44,6 +44,13 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
       >
         <Text style={styles.buttonText}>Add Menu Item</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('FilterMenu', { menuItems })}
+      >
+        <Text style={styles.buttonText}>Filter Menu</Text>
+      </TouchableOpacity>
     </View>
   );
 }
