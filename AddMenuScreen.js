@@ -85,6 +85,12 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
               <Text>Course: {item.course}</Text>
               <Text>Price: R{item.price}</Text>
             </View>
+            <TouchableOpacity
+              style={styles.removeButton}
+              onPress={() => removeDish(item.id)}
+            >
+              <Text style={styles.removeText}>Remove</Text>
+            </TouchableOpacity>
           </View>
         )}
       />
