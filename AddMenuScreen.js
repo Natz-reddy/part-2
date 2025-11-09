@@ -113,11 +113,20 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, backgroundColor: '#d8cfc4' },
-  title: { fontSize: 22, fontWeight: 'bold', marginBottom: 15, textAlign: 'center' },
-  input: { borderWidth: 1, borderColor: '#ccc', borderRadius: 8, padding: 10, marginBottom: 12, backgroundColor: '#fff', color: '#000' },
-  picker: { marginBottom: 16, backgroundColor: '#fff', height: 100 },
+  title: { fontSize: 22, fontWeight: 'bold', marginBottom: 15, textAlign: 'center', color: '#000' },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 8,
+    padding: 10,
+    marginBottom: 12,
+    backgroundColor: '#fff',
+    color: '#000',
+  },
+  picker: { marginBottom: 40, backgroundColor: '#fff', height: 100 },
   button: { backgroundColor: '#77dd77', padding: 12, borderRadius: 8, alignItems: 'center', marginBottom: 20 },
   buttonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
   card: { backgroundColor: '#fff', borderRadius: 10, padding: 15, marginBottom: 10 },
