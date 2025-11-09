@@ -62,6 +62,6 @@ const styles = StyleSheet.create({
   empty: { textAlign: 'center', fontStyle: 'italic', marginTop: 40, color: '#000' },
   card: { backgroundColor: '#fff', borderRadius: 10, padding: 15, marginBottom: 10 },
   name: { fontSize: 18, fontWeight: 'bold', marginBottom: 4 },
-  button: { backgroundColor: '#D2B48C', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 20 },
+  button: { backgroundColor: '#D2B48C', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 10 },
   buttonText: { color: '#fff', fontWeight: 'bold', fontSize: 16 },
-});});
+});
