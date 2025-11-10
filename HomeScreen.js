@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function HomeScreen({ navigation, route, menuItems, setMenuItems }) {
+
+  const presetMenu = [
+    { id: '1', name: 'Beef Fillet', description: 'Served with mushroom sauce', course: 'Main', price: 180 },
+    { id: '2', name: 'Greek Salad', description: 'Fresh with feta and olives', course: 'Starter', price: 75 },
+    { id: '3', name: 'Chocolate Mousse', description: 'Rich dark chocolate dessert', course: 'Dessert', price: 90 },
+    { id: '4', name: 'Grilled Chicken', description: 'With roasted vegetables', course: 'Main', price: 150 },
+  ];
   useEffect(() => {
     if (route.params?.newItem) {
       setMenuItems((prevItems) => [...prevItems, route.params.newItem]);
