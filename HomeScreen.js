@@ -90,7 +90,9 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, backgroundColor: '#d8cfc4' },
   title: { fontSize: 24, fontWeight: 'bold', textAlign: 'center', marginBottom: 10, color: '#000' },
-  subtitle: { fontSize: 16, textAlign: 'center', marginBottom: 10, color: '#000' },
+  subtitle: { fontSize: 16, textAlign: 'center', marginBottom: 5, color: '#000' },
+  sectionTitle: { fontSize: 18, fontWeight: 'bold', textAlign: 'center', marginTop: 10, marginBottom: 5, color: '#000' },
+  averageContainer: { backgroundColor: '#f8f4ef', borderRadius: 8, padding: 10, marginBottom: 10 },
   empty: { textAlign: 'center', fontStyle: 'italic', marginTop: 40, color: '#000' },
   card: { backgroundColor: '#fff', borderRadius: 10, padding: 15, marginBottom: 10 },
   name: { fontSize: 18, fontWeight: 'bold', marginBottom: 4 },
