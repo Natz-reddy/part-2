@@ -13,3 +13,7 @@ export default function FilterMenuScreen({ navigation }) {
 
   const filteredMenu =
     filter === "All" ? menu : menu.filter((item) => item.course === filter);
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Filter Menu</Text>
