@@ -9,6 +9,15 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
     { id: '3', name: 'Chocolate Mousse', description: 'Rich dark chocolate dessert', course: 'Dessert', price: 90 },
     { id: '4', name: 'Grilled Chicken', description: 'With roasted vegetables', course: 'Main', price: 150 },
   ];
+
+
+  useEffect(() => {
+    if (menuItems.length === 0) {
+      setMenuItems(presetMenu);
+    }
+  }, []);
+
+
   useEffect(() => {
     if (route.params?.newItem) {
       setMenuItems((prevItems) => [...prevItems, route.params.newItem]);
