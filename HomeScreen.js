@@ -43,7 +43,15 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
     <View style={styles.container}>
       <Text style={styles.title}>Christoffel's Menu</Text>
       <Text style={styles.subtitle}>Total Dishes: {totalItems}</Text>
-      <Text style={styles.subtitle}>Average Price: R{averagePrice}</Text>
+
+      <View style={styles.averageContainer}>
+        <Text style={styles.sectionTitle}>Average Price per Course</Text>
+        {courseAverages.map(({ course, average }) => (
+          <Text key={course} style={styles.subtitle}>
+            {course}: R{average}
+          </Text>
+        ))}
+      </View>
 
       {menuItems.length === 0 ? (
         <Text style={styles.empty}>No dishes yet</Text>
