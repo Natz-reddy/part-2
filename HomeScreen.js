@@ -21,7 +21,7 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
       <Text style={styles.subtitle}>Average Price: R{averagePrice}</Text>
 
       {menuItems.length === 0 ? (
-        <Text style={styles.empty}>No dishes available</Text>
+        <Text style={styles.empty}>No dishes yet</Text>
       ) : (
         <FlatList
           data={menuItems}
