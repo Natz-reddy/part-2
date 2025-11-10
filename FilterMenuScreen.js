@@ -17,3 +17,14 @@ export default function FilterMenuScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Filter Menu</Text>
+
+      <Picker
+        selectedValue={filter}
+        onValueChange={(itemValue) => setFilter(itemValue)}
+        style={styles.picker}
+      >
+        <Picker.Item label="All Courses" value="All" />
+        <Picker.Item label="Starter" value="Starter" />
+        <Picker.Item label="Main" value="Main" />
+        <Picker.Item label="Dessert" value="Dessert" />
+      </Picker>
