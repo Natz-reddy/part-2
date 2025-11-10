@@ -54,44 +54,12 @@ export default function FilterMenuScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: "#d8cfc4",
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: "bold",
-    marginBottom: 16,
-    textAlign: "center",
-    color: "black",
-  },
-  picker: {
-    marginBottom: 16,
-    backgroundColor: "white",
-  },
-  menuItem: {
-    padding: 12,
-    marginBottom: 6,
-    backgroundColor: "#fff",
-    borderRadius: 6,
-  },
-  menuText: {
-    fontSize: 16,
-    color: "black",
-  },
-  navContainer: {
-    marginTop: 20,
-  },
-  button: {
-    backgroundColor: 'brown',
-    padding: 12,
-    borderRadius: 8,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
+  container: {flex: 1,padding: 16,backgroundColor: "#d8cfc4",},
+  title: {fontSize: 22,fontWeight: "bold",marginBottom: 16,textAlign: "center",color: "black",},
+  picker: {marginBottom: 16,backgroundColor: "white",},
+  menuItem: {padding: 12,marginBottom: 6,backgroundColor: "#fff",borderRadius: 6, }, menuText: {fontSize: 16,color: "black",
+  },navContainer: {marginTop: 20,
+  },button: {backgroundColor: 'brown',padding: 12,borderRadius: 8,alignItems: 'center', },
+  buttonText: {color: '#fff',fontSize: 16, fontWeight: 'bold',
   },
 });
