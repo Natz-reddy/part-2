@@ -22,6 +22,7 @@ export default function FilterMenuScreen({ navigation }) {
         selectedValue={filter}
         onValueChange={(itemValue) => setFilter(itemValue)}
         style={styles.picker}
+        itemStyle={{ color: '#000', fontSize: 16 }}
       >
         <Picker.Item label="All Courses" value="All" />
         <Picker.Item label="Starter" value="Starter" />

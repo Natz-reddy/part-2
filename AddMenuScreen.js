@@ -30,7 +30,7 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Add / Manage Menu</Text>
+      <Text style={styles.title}> Manage Menu</Text>
 
   
       <TextInput
@@ -71,6 +71,8 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
       <TouchableOpacity style={styles.button} onPress={addDish}>
         <Text style={styles.buttonText}>Add Dish</Text>
       </TouchableOpacity>
+
+<Text style={styles.title}> Current Menu</Text>
 
    
       <FlatList
@@ -118,7 +120,7 @@ const styles = StyleSheet.create({
   title: { fontSize: 22, fontWeight: 'bold', marginBottom: 15, textAlign: 'center', color: '#000' },
   input: {borderWidth: 1,borderColor: '#ccc',borderRadius: 8,padding: 10,marginBottom: 12,
 backgroundColor: '#fff',color: '#000',},
-  picker: { marginBottom: 40, backgroundColor: '#fff', height: 100 },
+  picker: {marginBottom: 16,backgroundColor: "white", },
   button: { backgroundColor: '#77dd77', padding: 12, borderRadius: 8, alignItems: 'center', marginBottom: 20 },
   buttonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
   card: {flexDirection: 'row',alignItems: 'center',justifyContent: 'space-between',
