@@ -26,9 +26,18 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
 
   const totalItems = menuItems.length;
 
-  const averagePrice =
-    menuItems.length > 0
-      ? (menuItems.reduce((sum, item) => sum + item.price, 0) / menuItems.length).toFixed(2): 0;
+
+  const courseGroups = menuItems.reduce((acc, item) => {
+    if (!acc[item.course]) acc[item.course] = [];
+    acc[item.course].push(item);
+    return acc;
+  }, {});
+
+
+  const courseAverages = Object.entries(courseGroups).map(([course, items]) => {
+    const avg = (items.reduce((sum, i) => sum + i.price, 0) / items.length).toFixed(2);
+    return { course, average: avg };
+  });
 
   return (
     <View style={styles.container}>
