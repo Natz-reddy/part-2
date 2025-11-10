@@ -28,3 +28,15 @@ export default function FilterMenuScreen({ navigation }) {
         <Picker.Item label="Main" value="Main" />
         <Picker.Item label="Dessert" value="Dessert" />
       </Picker>
+
+      <FlatList
+        data={filteredMenu}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.menuItem}>
+            <Text style={styles.menuText}>
+              {item.name} - R{item.price} ({item.course})
+            </Text>
+          </View>
+        )}
+      />
