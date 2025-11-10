@@ -40,3 +40,15 @@ export default function FilterMenuScreen({ navigation }) {
           </View>
         )}
       />
+
+      <View style={styles.navContainer}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Home")}
+        >
+          <Text style={styles.buttonText}>Back to Home</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
