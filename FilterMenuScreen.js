@@ -2,17 +2,12 @@ import React, { useState } from "react";
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 
-export default function FilterMenuScreen({ navigation }) {
+export default function FilterMenuScreen({ navigation, menuItems }) {
   const [filter, setFilter] = useState("All");
 
-  const [menu] = useState([/*menu items to add too*/
-    { id: "1", name: 'Tomato Soup', description: 'Classic starter', course: 'Starter', price: 45 },
-    { id: "2", name: 'Grilled Chicken', description: 'Served with veggies', course: 'Main', price: 120 },
-    { id: "3", name: 'Chocolate Mousse', description: 'Rich and creamy', course: 'Dessert', price: 60 }
-  ]);
-
+ 
   const filteredMenu =
-    filter === "All" ? menu : menu.filter((item) => item.course === filter);
+    filter === "All" ? menuItems : menuItems.filter((item) => item.course === filter);
 
   return (
     <View style={styles.container}>
@@ -55,12 +50,12 @@ export default function FilterMenuScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: {flex: 1,padding: 16,backgroundColor: "#d8cfc4",},
-  title: {fontSize: 22,fontWeight: "bold",marginBottom: 16,textAlign: "center",color: "black",},
-  picker: {marginBottom: 16,backgroundColor: "white",},
-  menuItem: {padding: 12,marginBottom: 6,backgroundColor: "#fff",borderRadius: 6, }, menuText: {fontSize: 16,color: "black",
-  },navContainer: {marginTop: 20,
-  },button: {backgroundColor: 'brown',padding: 12,borderRadius: 8,alignItems: 'center', },
-  buttonText: {color: '#fff',fontSize: 16, fontWeight: 'bold',
-  },
+  container: {flex: 1,padding: 16,backgroundColor: "#d8cfc4"},
+  title: {fontSize: 22,fontWeight: "bold",marginBottom: 16,textAlign: "center",color: "black"},
+  picker: {marginBottom: 16,backgroundColor: "white"},
+  menuItem: {padding: 12,marginBottom: 6,backgroundColor: "#fff",borderRadius: 6},
+  menuText: {fontSize: 16,color: "black"},
+  navContainer: {marginTop: 20},
+  button: {backgroundColor: 'brown',padding: 12,borderRadius: 8,alignItems: 'center'},
+  buttonText: {color: '#fff',fontSize: 16,fontWeight: 'bold'},
 });
