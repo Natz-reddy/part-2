@@ -5,7 +5,7 @@ import { Picker } from "@react-native-picker/picker";
 export default function FilterMenuScreen({ navigation }) {
   const [filter, setFilter] = useState("All");
 
-  const [menu] = useState([
+  const [menu] = useState([/*menu items to add too*/
     { id: "1", name: 'Tomato Soup', description: 'Classic starter', course: 'Starter', price: 45 },
     { id: "2", name: 'Grilled Chicken', description: 'Served with veggies', course: 'Main', price: 120 },
     { id: "3", name: 'Chocolate Mousse', description: 'Rich and creamy', course: 'Dessert', price: 60 }

@@ -12,8 +12,7 @@ export default function HomeScreen({ navigation, route, menuItems, setMenuItems 
 
   const averagePrice =
     menuItems.length > 0
-      ? (menuItems.reduce((sum, item) => sum + item.price, 0) / menuItems.length).toFixed(2)
-      : 0;
+      ? (menuItems.reduce((sum, item) => sum + item.price, 0) / menuItems.length).toFixed(2): 0;
 
   return (
     <View style={styles.container}>

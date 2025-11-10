@@ -32,7 +32,7 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
     <View style={styles.container}>
       <Text style={styles.title}>Add / Manage Menu</Text>
 
-      {/* Input Fields */}
+  
       <TextInput
         style={styles.input}
         placeholder="Dish Name"
@@ -56,7 +56,7 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
         onChangeText={setDishPrice}
       />
 
-      {/* Course Picker */}
+   
       <Picker
         selectedValue={course}
         onValueChange={(itemValue) => setCourse(itemValue)}
@@ -68,12 +68,11 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
         <Picker.Item label="Dessert" value="Dessert" />
       </Picker>
 
-      {/* Add Dish Button */}
       <TouchableOpacity style={styles.button} onPress={addDish}>
         <Text style={styles.buttonText}>Add Dish</Text>
       </TouchableOpacity>
 
-      {/* Menu List */}
+   
       <FlatList
         data={menuItems}
         keyExtractor={(item) => item.id}
@@ -117,43 +116,19 @@ export default function AddMenuScreen({ navigation, menuItems, setMenuItems }) {
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, backgroundColor: '#d8cfc4' },
   title: { fontSize: 22, fontWeight: 'bold', marginBottom: 15, textAlign: 'center', color: '#000' },
-  input: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 8,
-    padding: 10,
-    marginBottom: 12,
-    backgroundColor: '#fff',
-    color: '#000',
-  },
+  input: {borderWidth: 1,borderColor: '#ccc',borderRadius: 8,padding: 10,marginBottom: 12,
+backgroundColor: '#fff',color: '#000',},
   picker: { marginBottom: 40, backgroundColor: '#fff', height: 100 },
   button: { backgroundColor: '#77dd77', padding: 12, borderRadius: 8, alignItems: 'center', marginBottom: 20 },
   buttonText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
-  card: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    padding: 15,
-    marginBottom: 10,
+  card: {flexDirection: 'row',alignItems: 'center',justifyContent: 'space-between',
+backgroundColor: '#fff',borderRadius: 10,padding: 15,marginBottom: 10,
   },
   name: { fontSize: 18, fontWeight: 'bold', marginBottom: 4, color: '#000' },
-  removeButton: {
-    backgroundColor: 'brown',
-    paddingVertical: 6,
-    paddingHorizontal: 10,
-    borderRadius: 6,
+  removeButton: {backgroundColor: 'brown',paddingVertical: 6,paddingHorizontal: 10,borderRadius: 6,
   },
-  removeText: { color: '#fff', fontWeight: 'bold', fontSize: 14 },
-  navContainer: { marginTop: 20, gap: 10 },
-  navButton: {
-    backgroundColor: '#fff',
-    borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 12,
-    borderRadius: 8,
-    alignItems: 'center',
-  },
-  navButtonText: { fontSize: 16, color: '#000', fontWeight: '600' },
+removeText: { color: '#fff', fontWeight: 'bold', fontSize: 14 },
+navContainer: { marginTop: 20, gap: 10 },
+navButton: {backgroundColor: '#fff',borderWidth: 1,borderColor: '#ccc',padding: 12,borderRadius: 8,alignItems: 'center',},
+navButtonText: { fontSize: 16, color: '#000', fontWeight: '600' },
 });
